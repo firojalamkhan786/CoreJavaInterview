@@ -16,6 +16,10 @@ public class RunnableThreadExample {
 
 		MyThread myThread = new MyThread();
 		Thread thread = new Thread(myThread,"Runnable Thread");
+		
+		String str = "Hello";
+		str.toCharArray();
+		//thread.getName();
 		thread.start();
 	}
 
@@ -40,6 +44,7 @@ class MyThread implements Runnable{
 	public void run() {
 		
 		try {
+			
 			for(int i=1 ; i<=uptoTable; i++)
 			{
 				System.out.println(num + " x " + i + " = " +(num*i));
